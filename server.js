@@ -11,6 +11,8 @@ io.on('connection',(socket)=>{
     //socket on mean receiving something
     socket.on('sendChatToServer',(message)=>{
         console.log(message);
+        // io.sockets.emit('sendChatToClient',message);
+        // socket.broadcast.emit('sendChatToClient',message);
     });
 
     //socket emit mean sending something
