@@ -12,7 +12,7 @@ io.on('connection',(socket)=>{
     socket.on('sendChatToServer',(message)=>{
         console.log(message);
         // io.sockets.emit('sendChatToClient',message);
-        // socket.broadcast.emit('sendChatToClient',message);
+        socket.broadcast.emit('sendChatToClient',message);
     });
 
     //socket emit mean sending something
