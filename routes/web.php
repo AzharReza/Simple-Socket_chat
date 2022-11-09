@@ -13,9 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
 Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/new', function () {
     return view('worker');
 });
+Route::get('msg',[\App\Http\Controllers\LearSocketController::class,'msg'])->name('msg');

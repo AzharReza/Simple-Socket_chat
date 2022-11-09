@@ -59,34 +59,34 @@
         </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
-        crossorigin="anonymous"></script>
-<script src="https://cdn.socket.io/4.5.3/socket.io.min.js"
-        integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi"
-        crossorigin="anonymous"></script>
+{{--<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="--}}
+{{--        crossorigin="anonymous"></script>--}}
+{{--<script src="https://cdn.socket.io/4.5.3/socket.io.min.js"--}}
+{{--        integrity="sha384-WPFUvHkB1aHA5TDSZi6xtDgkF0wXJcIIxXhC6h8OT8EH3fC5PWro5pWJ1THjcfEi"--}}
+{{--        crossorigin="anonymous"></script>--}}
 
-<script>
-    $(function () {
-        let ip_address = '127.0.0.1';
-        let socket_port = '3000';
-        let socket = io(ip_address + ':' + socket_port);
-        // socket.on('connection');
+{{--<script>--}}
+{{--    $(function () {--}}
+{{--        let ip_address = '127.0.0.1';--}}
+{{--        let socket_port = '3000';--}}
+{{--        let socket = io(ip_address + ':' + socket_port);--}}
+{{--        // socket.on('connection');--}}
 
-        let chatInput = $('#chatInput');
-        chatInput.keypress(function (e) {
-            let message = $(this).html();
-            console.log(message);
-            if (e.which === 13 && !e.shiftKey) {
-                socket.emit('sendChatToServer', message);
-                chatInput.html('');
-                return false;
-            }
-        });
+{{--        let chatInput = $('#chatInput');--}}
+{{--        chatInput.keypress(function (e) {--}}
+{{--            let message = $(this).html();--}}
+{{--            console.log(message);--}}
+{{--            if (e.which === 13 && !e.shiftKey) {--}}
+{{--                socket.emit('sendChatToServer', message);--}}
+{{--                chatInput.html('');--}}
+{{--                return false;--}}
+{{--            }--}}
+{{--        });--}}
 
-        socket.on('sendChatToClient', (message) => {
-            $('.chat-content ul').append(`<li>${message}</li>`);
-        });
-    });
-</script>
+{{--        socket.on('sendChatToClient', (message) => {--}}
+{{--            $('.chat-content ul').append(`<li>${message}</li>`);--}}
+{{--        });--}}
+{{--    });--}}
+{{--</script>--}}
 </body>
 </html>
